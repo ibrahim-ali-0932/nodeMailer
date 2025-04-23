@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Welcome to our MVC App</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <main>
+      <% if (message && message.text) { %>
+        <div class="alert alert-<%= message.type %>">
+          <%= message.text %>
+        </div>
+      <% } %>
+      
+      <h2>Home Page</h2>
+      <p>This is a simple MVC app with Nodemailer integration.</p>
+      <p>Use the contact form to send emails through the application.</p>
+      
+      <a href="/contact" class="btn">Contact Us</a>
+    </main>
+    
+    <footer>
+      <p>&copy; 2025 MVC Nodemailer App</p>
+    </footer>
+  </div>
+</body>
+</html>
